@@ -1,0 +1,56 @@
+.projects {
+    padding: 94px 0 94px 0;
+    &__btn {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 34px;
+    }
+    &__item:not(:last-child) {
+        margin-right: 8px;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__card {
+        max-width: 370px;
+        min-height: 404px;
+        border: 1px solid #EEEEEE;
+        cursor: pointer;
+    }
+    &__wrapper-img {
+        position: relative;
+        overflow: hidden;
+    }
+    &__wrapper-descr {
+        padding: 20px 24px;
+    }
+    &__descr {
+        color: $gray-color;
+        margin-bottom: 0;
+    }
+    &__card:not(:nth-child(3n+1)) {
+        margin-left: 30px;
+    }
+    &__card:not(:nth-child(-n+3)) {
+        margin-top: 30px;
+    }
+    &__hidden-descr {
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-weight: 400;
+        font-size: 18px;        
+        line-height: 28px;
+        letter-spacing: 0.03em;
+        padding: 63px 24px;
+        background: rgba(33, 150, 243, 0.9);
+        color: #FFFFFF;
+        transform: translateY(100%);
+        transition-duration: 500ms;
+    }
+    &__card:hover &__hidden-descr {
+        transform: translateY(0);
+    }
+}

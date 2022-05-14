@@ -1,0 +1,16 @@
+.tabs {
+    display: block;
+    color: $black-color;
+    font-weight: 500;
+    border-radius: 4px;
+    border: none;
+    font-size: 16px;
+    line-height: 26px;
+    cursor: pointer;
+    padding: 6px 32px;
+    &:hover {
+        color: #FFFFFF;
+        background: $main-color;
+        transition: 0.5s all; 
+    }
+}

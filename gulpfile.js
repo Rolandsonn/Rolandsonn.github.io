@@ -1,9 +1,10 @@
-const gulp        = require('gulp');
+const gulp = require('gulp');
 const browserSync = require('browser-sync');
 const sass = require('gulp-sass')(require('sass'));
 const rename = require("gulp-rename");
 const autoprefixer = require('gulp-autoprefixer');
 const cleanCSS = require('gulp-clean-css');
+const svgSprite = require('gulp-svg-sprite');
 
 // Static server
 gulp.task('server', function() {
@@ -36,3 +37,46 @@ gulp.task('watch', function() {
 });
 
 gulp.task('default', gulp.parallel('watch', 'server', 'styles'));
+
+//Sprite SVG
+
+function svgsprite(){
+    let config = {
+        shape: {
+            dimension: {
+                maxWidth: 500,
+                maxHeight: 500
+            },
+            spacing: {
+                padding: 0
+            },
+            transform: [{
+                "svgo": {
+                    "plugins": [
+                        { removeViewBox: false },
+                                { removeUnusedNS: false },
+                                { removeUselessStrokeAndFill: true },
+                                { cleanupIDs: false },
+                                { removeComments: true },
+                                { removeEmptyAttrs: true },
+                                { removeEmptyText: true },
+                                { collapseGroups: true },
+                                { removeAttrs: { attrs: '(fill|stroke|style)' } }
+                    ]
+                }
+            }]
+        },
+        mode: {
+            symbol: {
+                dest : '.',
+                sprite: 'sprite.svg'
+            }
+        }
+    };
+
+    return gulp.src("src/icons/svgIcons/*.svg")      
+        .pipe(svgSprite(config)).on('error', function(error){ console.log(error); })
+        .pipe(gulp.dest("dist/img/ "));
+}
+
+exports.svgsprite = svgsprite;

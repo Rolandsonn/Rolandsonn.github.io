@@ -1,0 +1,101 @@
+
+.footer {
+    min-height: 262px;
+    background: #2F303A;
+    .container {
+        display: flex;
+    }
+    &__wrapper {
+        padding-top: 60px;
+    }
+    
+    &__list {
+        margin-top: 20px;
+        width: 231px;
+        height: 81px;
+    }
+    &__logo {
+        font-weight: 700;
+        font-size: 26px;
+        letter-spacing: 0.03em;
+        color: #FFFFFF;
+        span {
+            color: #2196F3;
+        }
+    }
+    &__info {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        color: rgba(255, 255, 255, 0.6);
+        &:hover {
+            color: #2196F3;
+        }
+    }
+    &__address {
+        display: block;
+        margin-bottom: 9px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        color: #FFFFFF;
+    }
+    &__logo {
+        &:hover {
+            color: #2196F3;
+        }   
+    }
+    &__link {
+        display: flex;
+        justify-content: center;
+    }
+    &__social-icons {
+        padding: 10px;
+        width: 20px;
+        height: 20px;
+        fill: #afb1b8;
+    }
+    &__link-info:not(:nth-child(4n+1)) {
+        margin-left: 10px;
+    }
+    &__social {
+        padding: 72px 0 100px 72px;
+    }
+    &__connection {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        fill: #afb1b8;
+        &:hover {
+            background-color: $main-color;
+            border-radius: 50%;
+        }
+    }
+    &__connection:hover &__social-icons {
+        fill: #FFFFFF;
+        cursor: pointer;
+    }
+    &__input {
+        display: block;
+        min-width: 358px;
+        height: 50px;   
+        padding: 0;
+        padding-left: 16px; 
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 4px;
+        box-sizing: border-box;
+        background-color: #2F303A;
+        color: rgba(255, 255, 255, 0.6);
+    }
+    &__form {
+        display: flex;
+    }
+    &__subscribe {
+        padding: 72px 125px 94px 93px;
+    }
+    &__label {
+        margin-right: 10px;
+    }
+}

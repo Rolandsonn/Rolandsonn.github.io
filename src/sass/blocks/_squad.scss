@@ -1,0 +1,67 @@
+.squad {
+    padding: 94px 0 94px 0;
+    background: #F5F4FA;
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__item {
+        width: 270px;
+        min-height: 368px;
+        background: #FFFFFF;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 0px 0px 4px 4px; 
+    }
+    &__item:not(:nth-child(4n+1)) {
+        margin-left: 30px;
+    }
+    &__item:not(:nth-child(-n+4)) {
+        margin-top: 50px;
+    }
+    &__name {
+        line-height: 19px;
+        font-weight: 900;
+        font-size: 16px;
+        text-align: center;
+        letter-spacing: 0.03em;
+        color: #212121;
+    }
+    &__descr {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+        letter-spacing: 0.03em;
+        color: #757575;
+    }
+    &__social {
+        display: flex;
+        justify-content: center;
+    }
+    &__text {
+        padding: 30px 0 30px 0;
+    }
+    &__icon {
+        width: 20px;
+        height: 20px;
+        padding: 10px;
+    }
+    &__social-links:not(:nth-child(4n+1)) {
+        margin-left: 10px;
+    }
+    &__connection {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        fill: #afb1b8;
+        &:hover {
+            background-color: $main-color;
+            border-radius: 50%;
+        }
+    }
+    &__connection:hover &__icon {   
+        fill: #FFFFFF;  
+    }
+}

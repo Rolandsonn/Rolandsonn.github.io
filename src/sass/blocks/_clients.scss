@@ -1,0 +1,32 @@
+.clients {
+    padding: 94px 0 94px 0;
+    &__list {
+        display: flex;
+    }
+    &__title {
+        margin-bottom: 50px;
+    }
+    &__icons {
+        width: 106px;
+        height: 60px;
+        stroke-width: 0;
+        stroke: #212121;
+        background-color: #FFFFFF;
+        fill: #afb1b8;
+    }
+    &__item {
+        border: 1px solid #AFB1B8;
+        border-radius: 4px;
+        padding: 16px 32px;
+        cursor: pointer;
+        &:hover {
+            border: 1px solid $main-color
+        }
+    }
+    &__item:not(:nth-child(6n+1)) {
+        margin-left: 30px;
+    }
+    &__item:hover &__icons {
+        fill: $main-color;
+    }
+}

@@ -1,3 +1,16 @@
-.hello {
-    background-color: aliceblue;
-} 
+@import 'base/variables';
+@import 'base/media';
+@import 'base/container';
+@import 'blocks/header';
+@import 'blocks/hero';
+@import 'blocks/buttons';
+@import 'blocks/advantage';
+@import 'blocks/activity';
+@import 'blocks/squad';
+@import 'blocks/footer';
+@import 'blocks/portfolio';
+@import 'blocks/title';
+@import 'blocks/tabs';
+@import 'blocks/clients';
+@import 'blocks/modal';
+@import 'blocks/forms';
