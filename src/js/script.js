@@ -4,23 +4,23 @@ const modalClose = document.querySelector('[data-modal-close]')
 
 
 
-function modalToggler (element) {           //Создаем функцию тоглер, 
-    element.classList.toggle("hidden")
+function modalToggler (el) {           //Создаем функцию тоглер, 
+    el.classList.toggle("hidden")
 }
-console.log(modalBtn);
-modalBtn.addEventListener("click", () =>{modalToggler(backDrop)} )  
+
+modalBtn.addEventListener("click", () => {modalToggler(backDrop)} )  
 
 backDrop.addEventListener("click", (e) =>{
-    if(e.target.classList.contains('overlay')){
-        modalToggler(backDrop)
+    // if(e.target.classList.contains('overlay'))
+    if(e.target === e.currentTarget){
+        modalToggler(e.target)
     }
-    // else{
+    // else {
     //     alert('В этом элементе нет такого класса')
     // }
 } )
 
 modalClose.addEventListener("click", () =>{modalToggler(backDrop)} )
-
 
 
 

@@ -1,55 +1,77 @@
 .title {
+    font-family: 'Roboto-Black';
     font-weight: 900;
-    font-size: 44px;
-    line-height: 60px;
+    font-size: 26px;
+    line-height: 42px;
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+    @media screen and (min-width: 1200px) {
+        font-size: 44px;
+        line-height: 60px;
+    }
     color: #FFFFFF;
     &__activity {
+        font-family: 'Roboto-Bold';
         text-align: center;
         font-weight: 700;
         font-size: 36px;
         line-height: 42px;
-        text-align: center;
         letter-spacing: 0.03em;
         color: #212121;
     }
     &__activity-app {
+        font-family: 'Roboto-Bold';
         padding: 27px 75px;
         font-weight: 700;
         font-size: 14px;
         line-height: 16px;
-        letter-spacing: 0.03em;
         text-transform: uppercase;
         color: #FFFFFF;
         margin: 0;
     }
     &__squad {
-        text-align: center;
-        margin-bottom: 50px;
+        font-family: 'Roboto-Bold';
+        line-height: 33px;
         font-weight: 700;
         font-size: 36px;
-        letter-spacing: 0.03em;
-    }
-    &__clients {
         text-align: center;
         margin-bottom: 50px;
+        @media screen and (min-width: 768px) {
+            margin-bottom: 30px;
+        }
+    }
+    &__clients {
+        font-family: 'Roboto-Bold';
         font-weight: 700;
         font-size: 36px;
         line-height: 42px;
+        text-align: center;
+        margin-bottom: 50px;
+        @media screen and (min-width: 768px) {
+            margin-bottom: 30px;
+        }
     }
     &__footer {
-        margin-left: 13px;
-        margin-bottom: 20px; 
+        font-family: 'Roboto-Bold';
         font-weight: 700;
         font-size: 14px;
         line-height: 16px;
+        margin-top: 60px; 
+        margin-bottom: 20px;
+        text-align: center;
         letter-spacing: 0.03em;
         text-transform: uppercase;
         color: #FFFFFF;
+        @media screen and (min-width: 768px) {
+            margin-top: 0;
+        }
+        @media screen and (min-width: 1200px) {
+            text-align: left;
+        }
     }   
     &__projects {
+        font-family: 'Roboto-Bold';
         font-weight: 700;
         font-size: 16px;
         line-height: 36px;
@@ -57,6 +79,7 @@
         color: #212121;
     }
     &__modal {
+        font-family: 'Roboto-Bold';
         font-weight: 700;
         font-size: 18px;
         line-height: 23px;

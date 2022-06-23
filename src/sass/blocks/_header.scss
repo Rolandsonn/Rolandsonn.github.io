@@ -1,9 +1,14 @@
+//Mobile First
+
 .header {
-    min-height: 80px;
+    padding: 16px 0;
     border: 1px solid #ECECEC;
     background-color: #FFFFFF;
+    //Logotip
     &__logo {
-        padding: 24px 0 25px 0;
+        display: flex;
+        align-items: center;
+        font-family: 'Raleway-Bold';
         font-weight: 700;
         font-size: 26px;
         color: #000000;
@@ -12,28 +17,72 @@
         }
         .logo_blue {
             color: $main-color;
+            font-family: 'Raleway-Bold';
+            font-weight: 700;
         }
     }
-    &__wrapper {
+
+    //Navigation menu
+    &__menu {
         display: flex;
-        align-items: center;
         justify-content: space-between;
+    }
+    &__menu-container {
+        display: none;
+    }
+}
+
+//Burger menu
+.menu-button {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}
+.menu-button .icon-cross {
+    display: none;
+}
+
+.menu-button.is-open .icon-cross {
+    display: block !important;
+}
+
+.menu-button.is-open .icon-menu {
+    display: none;
+}
+
+//todo TABLET
+@media screen and (min-width: 768px) {
+    .header {
+        padding: 21px 0;
+    &__logo {
+        margin-right: 68px;
+    } 
+    &__menu-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
     }
     &__menu {
         display: flex;
-        align-items: center;
+        align-items: center;    
     }
     &__menu-list {
         display: flex;
         align-items: center;
-        padding: 24px 0 25px 0;
     }
-    &__menu-info:not(:last-child) {
+
+    &__menu-item:not(:first-child) {
         margin-left: 50px;
     }
+
     &__menu-info {
         display: flex;
-        margin-left: 50px;
+        font-family: 'Roboto-Medium';
         font-weight: 500;
         font-size: 14px;
         color: $black-color;
@@ -49,17 +98,19 @@
         position: absolute;
         content: '';
         background-color: $main-color;
-        bottom: -28px;
+        bottom: -33px;
         height: 4px;
         width: 100%;
         border-radius: 2px;
         color: $main-color;
     }
+    //contacts and email
     &__contacts-list {
-        display: flex;
-        // padding: 32px 0 32px 0;
+        display: block;
+        margin-left: 54px;
     }
     &__contacts-info {
+        font-family: 'Roboto-Medium';
         font-weight: 500;
         font-size: 14px;
         line-height: 16px;
@@ -67,7 +118,6 @@
     }
     &__contacts-item {
         display: flex;
-        margin-left: 30px;
         align-items: center;
         vertical-align: middle;
     }
@@ -78,16 +128,218 @@
         fill: #757575;
         vertical-align: middle;
     }
-
-    
     &__contacts-item:hover &__icon{
         fill: $main-color;
-
     }
     &__contacts-item:hover &__contacts-info{
         color: $main-color;
     }
 }
+}
+
+//todo DESKTOP
+@media screen and (min-width: 1200px) {
+    .header {
+        padding: 24px 0;
+        border: 1px solid #ECECEC;
+        background-color: #FFFFFF;
+    
+        //Logotip
+        &__logo {
+            font-family: 'Raleway-Bold';
+            margin-right: 94px;
+            font-weight: 700;
+            font-size: 26px;
+            color: #000000;
+            &:hover {
+                color: $main-color;
+            }
+            .logo_blue {
+                color: $main-color;
+                font-family: 'Raleway-Bold';
+                font-weight: 700;
+            }
+        }
+        &__menu-container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+        &__menu {
+            display: flex;
+            align-items: center;
+        }
+        &__menu-list {
+            display: flex;
+            align-items: center;
+        }
+    
+        &__menu-item:not(:first-child) {
+            margin-left: 50px;
+        }
+    
+        &__menu-info {
+            display: flex;
+            font-family: 'Roboto-Medium';
+            font-weight: 500;
+            font-size: 14px;
+            color: $black-color;
+            &:focus {
+                color: $main-color;
+            }
+        }  
+        .current{
+            position: relative;
+        }
+        .current::after {
+            display: block;
+            position: absolute;
+            content: '';
+            background-color: $main-color;
+            bottom: -24px;
+            height: 4px;
+            width: 100%;
+            border-radius: 2px;
+            color: $main-color;
+        }
+        //contacts and email
+        &__contacts-list {
+            display: flex;
+        }
+        &__contacts-info {
+            font-family: 'Roboto-Medium';
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 16px;
+            color: #757575;
+        }
+        &__contacts-item:not(:last-child) {
+            margin-right: 30px;
+        }
+        &__contacts-item {
+            display: flex;
+            align-items: center;
+            vertical-align: middle;
+        }
+        &__icon {
+            margin-right: 10px;
+            width: 17px;
+            height: 15px;
+            fill: #757575;
+            vertical-align: middle;
+        }
+        &__contacts-item:hover &__icon{
+            fill: $main-color;
+        }
+        &__contacts-item:hover &__contacts-info{
+            color: $main-color;
+        }
+    }
+}
+
+
+
+// .header {
+//     padding: 24px 0;
+//     border: 1px solid #ECECEC;
+//     background-color: #FFFFFF;
+
+//     //Logotip
+//     &__logo {
+//         font-family: 'Raleway-Bold';
+//         margin-right: 94px;
+//         font-weight: 700;
+//         font-size: 26px;
+//         color: #000000;
+//         &:hover {
+//             color: $main-color;
+//         }
+//         .logo_blue {
+//             color: $main-color;
+//             font-family: 'Raleway-Bold';
+//             font-weight: 700;
+//         }
+//     }
+
+//     //Navigation menu
+//     &__wrapper {
+//         display: flex;
+//         align-items: center;
+//         justify-content: space-between;
+//     }
+//     &__menu {
+//         display: flex;
+//         align-items: center;
+//     }
+//     &__menu-list {
+//         display: flex;
+//         align-items: center;
+//     }
+
+//     &__menu-item:not(:first-child) {
+//         margin-left: 50px;
+//     }
+
+//     &__menu-info {
+//         display: flex;
+//         font-family: 'Roboto-Medium';
+//         font-weight: 500;
+//         font-size: 14px;
+//         color: $black-color;
+//         &:focus {
+//             color: $main-color;
+//         }
+//     }  
+//     .current{
+//         position: relative;
+//     }
+//     .current::after {
+//         display: block;
+//         position: absolute;
+//         content: '';
+//         background-color: $main-color;
+//         bottom: -24px;
+//         height: 4px;
+//         width: 100%;
+//         border-radius: 2px;
+//         color: $main-color;
+//     }
+//     //contacts and email
+//     &__contacts-list {
+//         display: flex;
+//     }
+//     &__contacts-info {
+//         font-family: 'Roboto-Medium';
+//         font-weight: 500;
+//         font-size: 14px;
+//         line-height: 16px;
+//         color: #757575;
+//     }
+//     &__contacts-item:not(:last-child) {
+//         margin-right: 30px;
+//     }
+//     &__contacts-item {
+//         display: flex;
+//         align-items: center;
+//         vertical-align: middle;
+//     }
+//     &__icon {
+//         margin-right: 10px;
+//         width: 17px;
+//         height: 15px;
+//         fill: #757575;
+//         vertical-align: middle;
+//     }
+//     &__contacts-item:hover &__icon{
+//         fill: $main-color;
+//     }
+//     &__contacts-item:hover &__contacts-info{
+//         color: $main-color;
+//     }
+// }
+
+
+
 
 
 

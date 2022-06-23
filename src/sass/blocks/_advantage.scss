@@ -1,9 +1,87 @@
+
 .advantage {
-    margin-top: 94px;
+    padding: 60px 0;
+    @media screen and (min-width: 1200px) {
+        padding: 0;
+    }
+    &__title {
+        font-family: 'Roboto-Bold';
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.03em;
+        text-align: center;
+        text-transform: uppercase;
+        color: #212121;
+    }
+    // &__items {
+    //     max-width: 270px;
+    //     min-height: 75px;
+    // }
+    &__items::before {
+        display: block;
+        content: '';
+        background-color: $portfolio-color;
+        width: 100%;
+        height: 120px;
+        margin-bottom: 30px;    
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    &__items-descr {
+        margin: 0;
+        font-family: 'Roboto-Regular';
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 0.03em;
+        color: #757575;
+    }
+    .antenna::before {
+        background-image: url(../icons/antenna.svg);
+    }
+    .clock::before {
+        background-image: url(../icons/clock.svg);
+    }
+    .diagram::before {
+        background-image: url(../icons/diagram.svg);
+    }
+    .astronaut::before {
+        background-image: url(../icons/astronaut.svg);
+    }
+}
+    
+//todo TABLET
+@media screen and (min-width: 768px) {
+    .advantage {
+        &__title {
+            text-align: left;
+        }
+        &__list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        &__items:nth-child(2n) {
+            margin-left: 30px;
+        }
+        &__items {
+        width: 344px;
+        min-height: 120px;
+        }
+    }
+}
+
+
+//todo DESKTOP
+@media screen and (min-width: 1200px) {
+.advantage {
+    padding-top: 94px;
     min-height: 101px;
     display: flex;
     flex-wrap: wrap;
-    h3 {
+    &__title {
+        font-family: 'Roboto-Bold';
         font-weight: 700;
         font-size: 14px;
         line-height: 16px;
@@ -13,12 +91,10 @@
     }
     &__list {
         display: flex;
+        justify-content: center;
     }
-    &__items:not(:nth-child(4n+1)) {
+    &__items:not(:first-child) {
         margin-left: 30px;
-    }
-    &__items:not(:nth-child(-n+4)) {
-        margin-top: 50px;
     }
     &__items {
         max-width: 270px;
@@ -36,6 +112,7 @@
     }
     &__items-descr {
         margin: 0;
+        font-family: 'Roboto-Regular';
         font-weight: 400;
         font-size: 14px;
         line-height: 24px;
@@ -43,16 +120,78 @@
         color: #757575;
     }
     .antenna::before {
-        background-image: url(../../icons/antenna.svg);
+        background-image: url(../icons/antenna.svg);
     }
     .clock::before {
-        background-image: url(../../icons/clock.svg);
+        background-image: url(../icons/clock.svg);
     }
     .diagram::before {
-        background-image: url(../../icons/diagram.svg);
+        background-image: url(../icons/diagram.svg);
     }
     .astronaut::before {
-        background-image: url(../../icons/astronaut.svg);
+        background-image: url(../icons/astronaut.svg);
     }
 }
+}
+
+// .advantage {
+//     padding-top: 94px;
+//     min-height: 101px;
+//     display: flex;
+//     flex-wrap: wrap;
+//     &__title {
+//         font-family: 'Roboto-Bold';
+//         font-weight: 700;
+//         font-size: 14px;
+//         line-height: 16px;
+//         letter-spacing: 0.03em;
+//         text-transform: uppercase;
+//         color: #212121;
+//     }
+//     &__list {
+//         display: flex;
+//         justify-content: center;
+//     }
+//     &__items:not(:first-child) {
+//         margin-left: 30px;
+//     }
+//     &__items {
+//         max-width: 270px;
+//         min-height: 75px;
+//     }
+//     &__items::before {
+//         display: block;
+//         content: '';
+//         background-color: $portfolio-color;
+//         width: 100%;
+//         height: 120px;
+//         margin-bottom: 30px;    
+//         background-repeat: no-repeat;
+//         background-position: center;
+//     }
+//     &__items-descr {
+//         margin: 0;
+//         font-family: 'Roboto-Regular';
+//         font-weight: 400;
+//         font-size: 14px;
+//         line-height: 24px;
+//         letter-spacing: 0.03em;
+//         color: #757575;
+//     }
+//     .antenna::before {
+//         background-image: url(../icons/antenna.svg);
+//     }
+//     .clock::before {
+//         background-image: url(../icons/clock.svg);
+//     }
+//     .diagram::before {
+//         background-image: url(../icons/diagram.svg);
+//     }
+//     .astronaut::before {
+//         background-image: url(../icons/astronaut.svg);
+//     }
+// }
+
+
+
 

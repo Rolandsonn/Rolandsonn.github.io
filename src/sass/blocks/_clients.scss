@@ -1,10 +1,9 @@
 .clients {
-    padding: 94px 0 94px 0;
+    padding: 60px 0;
     &__list {
         display: flex;
-    }
-    &__title {
-        margin-bottom: 50px;
+        flex-wrap: wrap;
+        justify-content: center;
     }
     &__icons {
         width: 106px;
@@ -17,16 +16,128 @@
     &__item {
         border: 1px solid #AFB1B8;
         border-radius: 4px;
-        padding: 16px 32px;
+        padding: 16px 52px;
+        margin-top: 30px;
         cursor: pointer;
         &:hover {
             border: 1px solid $main-color
         }
     }
-    &__item:not(:nth-child(6n+1)) {
-        margin-left: 30px;
-    }
+    &__item:nth-child(2n) {
+        margin-left: 24px;
+    }  
     &__item:hover &__icons {
         fill: $main-color;
+    }  
+}
+@media (max-width: 478px) {
+    .clients {
+        &__list {
+            display: block;
+        }
+        &__item {
+            display: block;
+            margin: 0 auto;
+            margin-top: 30px;
+        }
+        &__item:nth-child(2n) {
+            margin-left: 0;
+        } 
+        &__icons {
+            display: block;
+            margin: 0 auto;
+        }
     }
 }
+
+//todo Tablet 
+@media screen and (min-width: 768px) {
+    .title__clients {
+        margin-bottom: 30px;
+    }
+    .clients {
+        &__item:nth-child(2n) {
+            margin-left: 0;
+        }
+        &__list {
+            gap: 30px;
+        }
+        &__item {
+            margin-top: 0;
+        }
+    }
+}
+
+//todo DESKTOP 
+@media screen and (min-width: 1200px) {
+    .clients {
+        padding: 94px 0;
+        &__list {
+            display: flex;
+            justify-content: center;
+            gap: 0;
+        }
+        &__title {
+            margin-bottom: 50px;
+        }
+        &__icons {
+            width: 106px;
+            height: 60px;
+            stroke-width: 0;
+            stroke: #212121;
+            background-color: #FFFFFF;
+            fill: #afb1b8;
+        }
+        &__item {
+            border: 1px solid #AFB1B8;
+            border-radius: 4px;
+            padding: 16px 32px;
+            cursor: pointer;
+            &:hover {
+                border: 1px solid $main-color
+            }
+        }
+        &__item:not(:first-child) {
+            margin-left: 30px;
+        }
+        &__item:hover &__icons {
+            fill: $main-color;
+        }
+    }
+}
+
+// .clients {
+//     padding: 94px 0;
+//     &__list {
+//         display: flex;
+//         justify-content: center;
+//     }
+//     &__title {
+//         margin-bottom: 50px;
+//     }
+//     &__icons {
+//         width: 106px;
+//         height: 60px;
+//         stroke-width: 0;
+//         stroke: #212121;
+//         background-color: #FFFFFF;
+//         fill: #afb1b8;
+//     }
+//     &__item {
+//         border: 1px solid #AFB1B8;
+//         border-radius: 4px;
+//         padding: 16px 32px;
+//         cursor: pointer;
+//         &:hover {
+//             border: 1px solid $main-color
+//         }
+//     }
+//     &__item:not(:first-child) {
+//         margin-left: 30px;
+//     }
+//     &__item:hover &__icons {
+//         fill: $main-color;
+//     }
+// }
+
+

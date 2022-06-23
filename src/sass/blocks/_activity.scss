@@ -1,8 +1,16 @@
 .activity {
-    padding: 94px 0 94px 0; //исправить 
-    &__list{
+    display: none;
+}
+
+//todo DESKTOP
+@media screen and (min-width: 1200px) {
+.activity {
+    display: block;
+    padding: 94px 0; //исправить 
+    &__list {
         display: flex;
-        flex-wrap: wrap;
+        // flex-wrap: wrap;
+        justify-content: center;
     }
     &__wrapper {
         position: absolute;
@@ -22,3 +30,31 @@
         margin-top: 30px;
     }
 }
+}
+// .activity {
+//     padding: 94px 0; //исправить 
+//     &__list{
+//         display: flex;
+//         // flex-wrap: wrap;
+//         justify-content: center;
+//     }
+//     &__wrapper {
+//         position: absolute;
+//         width: 370px;
+//         height: 70px;
+//         top: 76%;
+//         left: 0;
+//         background-color: rgba(47, 48, 58, 0.8);
+//     }
+//     &__item {
+//         position: relative;
+//     }
+//     &__item:not(:nth-child(3n+1)) {  //применять для li 
+//         margin-left: 30px;
+//     }
+//     &__item:not(:nth-child(-n+3)) {
+//         margin-top: 30px;
+//     }
+// }
+
+

@@ -1,12 +1,47 @@
+
 .hero {
-    min-height: 600px;
+    padding: 118px 0;
+    background-image: url('../img/bg_small.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+}
+
+//todo TABLET
+@media screen and (min-width: 768px) {
+    .hero {
+        background-image: url('../img/bg_middle.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 100vw;
+    }
+}
+
+
+//todo DESKTOP
+@media screen and (min-width: 1200px) {
+    .hero {
+    padding: 200px 0;
     background-image: url('../img/bg_hero.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    &__wrapper {
-        padding-top: 200px;
-        padding-bottom: 200px;
-        margin: 0 auto;
+    width: 100vw;
     }
 }
+
+// .hero {
+//     padding: 200px 0;
+//     background-image: url('../img/bg_hero.jpg');
+//     background-repeat: no-repeat;
+//     background-position: center;
+//     background-size: cover;
+//     &__wrapper {
+//         padding-top: 200px;
+//         padding-bottom: 200px;
+//         margin: 0 auto;
+//     }
+// }
+

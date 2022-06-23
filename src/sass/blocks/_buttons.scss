@@ -5,6 +5,7 @@
     border-radius: 7px;
     border: none;
     line-height: 30px;
+    font-family: 'Roboto-Bold';
     font-weight: 700;
     font-size: 16px;
     color: #FFFFFF;
@@ -15,25 +16,68 @@
         transition: 0.5s all;
         box-shadow: 3px 2px 20px $main-color;
     }
-    &_modal {
-        padding: 10px 55px;
-    }
+    // &_modal {
+    //     padding: 10px 55px;
+    // }
     &__footer::after {
         content: '';
         display: inline-block;
         margin-left: 10px;
         width: 24px;
         height: 24px;
-        background-image: url(../../icons/icon\ send.svg);
+        background-image: url(../icons/telegram.svg);
         background-repeat: no-repeat;
         background-size: contain;
         align-items: center;
         vertical-align: middle;
     }
     &__footer {
-        display: flex;
+        height: 50px;
         padding: 10px 29px;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
         border-radius: 4px;
     }
 }
+
+
+
+// .button {
+//     padding: 10px 32px;
+//     background: $main-color;
+//     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+//     border-radius: 7px;
+//     border: none;
+//     line-height: 30px;
+//     font-family: 'Roboto-Bold';
+//     font-weight: 700;
+//     font-size: 16px;
+//     color: #FFFFFF;
+//     display: block;
+//     margin: 0 auto;
+//     cursor: pointer;
+//     &:hover {
+//         transition: 0.5s all;
+//         box-shadow: 3px 2px 20px $main-color;
+//     }
+//     &_modal {
+//         padding: 10px 55px;
+//     }
+//     &__footer::after {
+//         content: '';
+//         display: inline-block;
+//         margin-left: 10px;
+//         width: 24px;
+//         height: 24px;
+//         background-image: url(../icons/icon\ send.svg);
+//         background-repeat: no-repeat;
+//         background-size: contain;
+//         align-items: center;
+//         vertical-align: middle;
+//     }
+//     &__footer {
+//         display: flex;
+//         padding: 10px 29px;
+//         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+//         border-radius: 4px;
+//     }
+// }

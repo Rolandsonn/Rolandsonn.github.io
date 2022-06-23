@@ -11,75 +11,91 @@
 <body>
     <header class="header">
         <div class="container">
-            <div class="header__wrapper">
-                <nav class="header__menu">
-                    <a href="#" class="header__logo"><span class="logo_blue">Web</span>Studio</a>
-                    <ul class="header__menu-list">
-                        <li class="menu_item">
-                            <a class="header__menu-info current" href="#">Студия</a>
-                        </li>
-                        <li class="menu_item">
-                            <a class="header__menu-info" href="portfolio.html">Портфолио</a>
-                        </li>
-                        <li class="menu_item">
-                            <a class="header__menu-info" href="#">Контакты</a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="header__contacts">
-                    <ul class="header__contacts-list">
-                        <li class="header__contacts-item email">    
-                            <a href="info@devstudio.com" class="header__connection">
-                                <svg class="header__icon">
-                                    <use href="./icons/social.svg#message"></use>
-                                </svg>
-                            </a>
-                            <a class="header__contacts-info" href="info@devstudio.com">info@devstudio.com</a>
-                        </li>
-                        <li class="header__contacts-item smartphone">
-                            <a href="tel:+380961111111" class="header__connection">
-                                <svg class="header__icon">
-                                    <use href="./icons/social.svg#smartphone"></use>
-                                </svg>
-                            </a>
-                            <a class="header__contacts-info" href="tel:+380961111111">+38 096 111 11 11</a>
-                        </li>
-                    </ul>
+            <nav class="header__menu">
+                <a href="#" class="header__logo"><span class="logo_blue">Web</span>Studio</a>
+                <div class="header__menu-container is-open" id="menu-container" data-menu>
+                    <!-- <div class="header__wrapper"> -->
+                        <ul class="header__menu-list">
+                            <li class="header__menu-item">
+                                <a class="header__menu-info current" href="#">Студия</a>
+                            </li>
+                            <li class="header__menu-item">
+                                <a class="header__menu-info" href="portfolio.html">Портфолио</a>
+                            </li>
+                            <li class="header__menu-item">
+                                <a class="header__menu-info" href="#">Контакты</a>
+                            </li>
+                        </ul>
+                    <!-- </div> -->
+
+                    <!-- <div class="header__contacts"> -->
+                        <ul class="header__contacts-list">
+                            <li class="header__contacts-item email">    
+                                <a href="info@devstudio.com" class="header__connection">
+                                    <svg class="header__icon">
+                                        <use href="./icons/sprite-new.svg#message"></use>
+                                    </svg>
+                                </a>
+                                <a class="header__contacts-info" href="info@devstudio.com">info@devstudio.com</a>
+                            </li>
+                            <li class="header__contacts-item smartphone">
+                                <a href="tel:+380961111111" class="header__connection">
+                                    <svg class="header__icon">
+                                        <use href="./icons/sprite-new.svg#smartphone"></use>
+                                    </svg>
+                                </a>
+                                <a class="header__contacts-info" href="tel:+380961111111">+38 096 111 11 11</a>
+                            </li>
+                        </ul>
+                    <!-- </div> -->
                 </div>
-            </div>
+                <button 
+                    type="button" 
+                    class="menu-button" 
+                    aria-expanded="false"
+                    data-menu-button
+                >
+                    <svg 
+                        width="40" 
+                        height="40" 
+                        aria-label="Переключатель мобильного меню"
+                    >
+                        <use class="icon-cross" href="./icons/sprite-new.svg#close_btn"></use>
+                        <use class="icon-menu" href="./icons/sprite-new.svg#menu_btn"></use>
+                    </svg>
+                </button>
+            </nav>
         </div>
     </header>
 
     <main class="main">
         <section class="hero">
-            <div class="hero__wrapper">
+            <div class="container hero__wrapper">
                 <h1 class="title title__hero">Эффективные решения <br> для вашего бизнеса</h1>
                 <button class="button button_main" id="button_main">Заказать услугу</button>
             </div>
         </section>
 
         <section class="advantage">
-            <div class="container">
-                <div class="advantage__wrapper">
-                    <ul class="advantage__list">
-                        <li class="advantage__items antenna">
-                            <h3>Внимание к деталям</h3>
-                            <p class="advantage__items-descr">Идейные соображения, а также начало повседневной работы по формированию позиции.</p>
-                        </li>
-                        <li class="advantage__items clock">
-                            <h3>Пунктуальность</h3>
-                            <p class="advantage__items-descr">Задача организации, в особенности же рамки и место обучения кадров влечет за собой.</p>
-                        </li>
-                        <li class="advantage__items diagram">
-                            <h3>Планирование</h3>
-                            <p class="advantage__items-descr">Равным образом консультация с широким активом в значительной степени обуславливает.</p>
-                        </li>
-                        <li class="advantage__items astronaut">
-                            <h3>Современные технологии</h3>
-                            <p class="advantage__items-descr">Значимость этих проблем настолько очевидна, что реализация плановых заданий.</p>
-                        </li>
-                    </ul>
-                </div>
+            <div class="container advantage__wrapper">
+                <ul class="advantage__list">
+                    <li class="advantage__items antenna">
+                        <h2 class="advantage__title">Внимание к деталям</h2>
+                        <p class="advantage__items-descr">Идейные соображения, а также начало повседневной работы по формированию позиции.</p>
+                    </li>
+                    <li class="advantage__items clock">
+                        <h2 class="advantage__title">Пунктуальность</h2>
+                        <p class="advantage__items-descr">Задача организации, в особенности же рамки и место обучения кадров влечет за собой.</p>
+                    </li>
+                    <li class="advantage__items diagram">
+                        <h2 class="advantage__title">Планирование</h2>
+                        <p class="advantage__items-descr">Равным образом консультация с широким активом в значительной степени обуславливает.</p>
+                    </li>
+                    <li class="advantage__items astronaut">
+                        <h2 class="advantage__title">Современные технологии</h2>
+                        <p class="advantage__items-descr">Значимость этих проблем настолько очевидна, что реализация плановых заданий.</p>
+                    </li>
+                </ul>
             </div>
         </section>
 
@@ -110,8 +126,8 @@
         </section>
 
         <section class="squad">
+            <h2 class="title__squad">Наша команда</h2>
             <div class="container">
-                <h2 class="title__squad">Наша команда</h2>
                 <div class="squad__frame">
                     <ul class="squad__list">
                         <li class="squad__item">
@@ -123,28 +139,28 @@
                                     <li class="squad__social squad__social-links">
                                         <a href="#" class="squad__connection">
                                             <svg class="squad__icon">
-                                                <use href="./icons/social.svg#instagram"></use>
+                                                <use href="./icons/sprite-new.svg#instagram"></use>
                                             </svg>
                                         </a>
                                     </li>
                                     <li class="squad__social squad__social-links">
                                         <a href="#" class="squad__connection">
                                             <svg class="squad__icon">
-                                                <use href="./icons/sprite.svg#twitter"></use>
+                                                <use href="./icons/sprite-new.svg#twitter"></use>
                                             </svg>
                                         </a>
                                     </li>
                                     <li class="squad__social squad__social-links">
                                         <a href="#" class="squad__connection">
                                             <svg class="squad__icon">
-                                                <use href="./icons/social.svg#facebook"></use>
+                                                <use href="./icons/sprite-new.svg#facebook"></use>
                                             </svg>
                                         </a>
                                     </li>
                                     <li class="squad__social squad__social-links">
                                         <a href="#" class="squad__connection">
                                             <svg class="squad__icon">
-                                                <use href="./icons/social.svg#linkedin"></use>
+                                                <use href="./icons/sprite-new.svg#linkedin"></use>
                                             </svg>
                                         </a>
                                     </li>
@@ -160,28 +176,28 @@
                                     <li class="squad__social squad__social-links">
                                         <a href="#" class="squad__connection">
                                             <svg class="squad__icon">
-                                                <use href="./icons/social.svg#instagram"></use>
+                                                <use href="./icons/sprite-new.svg#instagram"></use>
                                             </svg>
                                         </a>
                                     </li>
                                     <li class="squad__social squad__social-links">
                                         <a href="#" class="squad__connection">
                                             <svg class="squad__icon">
-                                                <use href="./icons/social.svg#twitter"></use>
+                                                <use href="./icons/sprite-new.svg#twitter"></use>
                                             </svg>
                                         </a>
                                     </li>
                                     <li class="squad__social squad__social-links">
                                         <a href="#" class="squad__connection">
                                             <svg class="squad__icon">
-                                                <use href="./icons/social.svg#facebook"></use>
+                                                <use href="./icons/sprite-new.svg#facebook"></use>
                                             </svg>
                                         </a>
                                     </li>
                                     <li class="squad__social squad__social-links">
                                         <a href="#" class="squad__connection">
                                             <svg class="squad__icon">
-                                                <use href="./icons/social.svg#linkedin"></use>
+                                                <use href="./icons/sprite-new.svg#linkedin"></use>
                                             </svg>
                                         </a>
                                     </li>
@@ -197,28 +213,28 @@
                                     <li class="squad__social squad__social-links">
                                         <a href="#" class="squad__connection">
                                             <svg class="squad__icon">
-                                                <use href="./icons/social.svg#instagram"></use>
+                                                <use href="./icons/sprite-new.svg#instagram"></use>
                                             </svg>
                                         </a>
                                     </li>
                                     <li class="squad__social squad__social-links">
                                         <a href="#" class="squad__connection">
                                             <svg class="squad__icon">
-                                                <use href="./icons/social.svg#twitter"></use>
+                                                <use href="./icons/sprite-new.svg#twitter"></use>
                                             </svg>
                                         </a>
                                     </li>
                                     <li class="squad__social squad__social-links">
                                         <a href="#" class="squad__connection">
                                             <svg class="squad__icon">
-                                                <use href="./icons/social.svg#facebook"></use>
+                                                <use href="./icons/sprite-new.svg#facebook"></use>
                                             </svg>
                                         </a>
                                     </li>
                                     <li class="squad__social squad__social-links">
                                         <a href="#" class="squad__connection">
                                             <svg class="squad__icon">
-                                                <use href="./icons/social.svg#linkedin"></use>
+                                                <use href="./icons/sprite-new.svg#linkedin"></use>
                                             </svg>
                                         </a>
                                     </li>
@@ -234,28 +250,28 @@
                                     <li class="squad__social squad__social-links">
                                         <a href="#" class="squad__connection">
                                             <svg class="squad__icon">
-                                                <use href="./icons/social.svg#instagram"></use>
+                                                <use href="./icons/sprite-new.svg#instagram"></use>
                                             </svg>
                                         </a>
                                     </li>
                                     <li class="squad__social squad__social-links">
                                         <a href="#" class="squad__connection">
                                             <svg class="squad__icon">
-                                                <use href="./icons/social.svg#twitter"></use>
+                                                <use href="./icons/sprite-new.svg#twitter"></use>
                                             </svg>
                                         </a>
                                     </li>
                                     <li class="squad__social squad__social-links">
                                         <a href="#" class="squad__connection">
                                             <svg class="squad__icon">
-                                                <use href="./icons/social.svg#facebook"></use>
+                                                <use href="./icons/sprite-new.svg#facebook"></use>
                                             </svg>
                                         </a>
                                     </li>
                                     <li class="squad__social squad__social-links">
                                         <a href="#" class="squad__connection">
                                             <svg class="squad__icon">
-                                                <use href="./icons/social.svg#linkedin"></use>
+                                                <use href="./icons/sprite-new.svg#linkedin"></use>
                                             </svg>
                                         </a>
                                     </li>
@@ -269,49 +285,49 @@
     </main>
 
     <section class="clients">
+        <h2 class="title__clients">Постоянные клиенты</h2>
         <div class="container">
             <div class="clients__wrapper">
-                <h2 class="title__clients">Постоянные клиенты</h2>
                 <ul class="clients__list">
                     <li class="clients__item">
                         <a href="#" class="clients__logo">
                             <svg class="clients__icons">
-                                <use href="./icons/sprite.svg#company_1"></use>
+                                <use href="./icons/sprite-new.svg#company_1"></use>
                             </svg>
                         </a>
                     </li>
                     <li class="clients__item">
                         <a href="#" class="clients__logo">
                             <svg class="clients__icons">
-                                <use href="./icons/sprite.svg#company_2"></use>
+                                <use href="./icons/sprite-new.svg#company_2"></use>
                             </svg>
                         </a>
                     </li>
                     <li class="clients__item">
                         <a href="#" class="clients__logo">
                             <svg class="clients__icons">
-                                <use href="./icons/sprite.svg#company_3"></use>
+                                <use href="./icons/sprite-new.svg#company_3"></use>
                             </svg>
                         </a>
                     </li>
                     <li class="clients__item">
                         <a href="#" class="clients__logo">
                             <svg class="clients__icons">
-                                <use href="./icons/sprite.svg#company_4"></use>
+                                <use href="./icons/sprite-new.svg#company_4"></use>
                             </svg>
                         </a>
                     </li>
                     <li class="clients__item">
                         <a href="#" class="clients__logo">
                             <svg class="clients__icons">
-                                <use href="./icons/sprite.svg#company_5"></use>
+                                <use href="./icons/sprite-new.svg#company_5"></use>
                             </svg>
                         </a>
                     </li>
                     <li class="clients__item">
                         <a href="" class="clients__logo">
                             <svg class="clients__icons">
-                                <use href="./icons/sprite.svg#company_6"></use>
+                                <use href="./icons/sprite-new.svg#company_6"></use>
                             </svg>
                         </a>
                     </li>
@@ -322,52 +338,54 @@
 
     <footer class="footer">
         <div class="container">
-            <div class="footer__wrapper">
-                <a href="#" class="footer__logo"><span class="logo_blue">Web</span>Studio</a>
-                <ul class="footer__list">
-                    <li class="footer__item">
-                        <a class="footer__address"> г. Киев, пр-т Леси Украинки, 26</a>
-                    </li>
-                    <li class="footer__item">
-                        <a class="footer__info" href="info@example.com">info@example.com</a> 
-                    </li>
-                    <li class="footer__item">
-                        <a class="footer__info" href="tel:+380961111111">+38 096 111 11 11</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="footer__social">
-                <h2 class="title__footer">присоединяйтесь</h2>
-                <ul class="footer__link">
-                    <li class="footer__link-info">
-                        <a href="#" class="footer__connection">
-                            <svg class="footer__social-icons">
-                                <use href="./icons/social.svg#instagram"/>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="footer__link-info">
-                        <a href="" class="footer__connection">
-                            <svg class="footer__social-icons">
-                                <use href="./icons/sprite.svg#twitter"/>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="footer__link-info">
-                        <a href="" class="footer__connection">
-                            <svg class="footer__social-icons">
-                                <use href="./icons/social.svg#facebook"/>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="footer__link-info">
-                        <a href="" class="footer__connection">
-                            <svg class="footer__social-icons">
-                                <use href="./icons/social.svg#linkedin"/>
-                            </svg>
-                        </a>
-                    </li>
-                </ul>
+            <div class="footer__inner">
+                <div class="footer__wrapper">
+                    <a href="#" class="footer__logo"><span class="logo_blue">Web</span>Studio</a>
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            <a class="footer__address"> г. Киев, пр-т Леси Украинки, 26</a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__info" href="info@example.com">info@example.com</a> 
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__info" href="tel:+380961111111">+38 096 111 11 11</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__social">
+                    <h2 class="title__footer">присоединяйтесь</h2>
+                    <ul class="footer__link">
+                        <li class="footer__link-info">
+                            <a href="#" class="footer__connection">
+                                <svg class="footer__social-icons">
+                                    <use href="./icons/sprite-new.svg#instagram"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="footer__link-info">
+                            <a href="" class="footer__connection">
+                                <svg class="footer__social-icons">
+                                    <use href="./icons/sprite-new.svg#twitter"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="footer__link-info">
+                            <a href="" class="footer__connection">
+                                <svg class="footer__social-icons">
+                                    <use href="./icons/sprite-new.svg#facebook"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="footer__link-info">
+                            <a href="" class="footer__connection">
+                                <svg class="footer__social-icons">
+                                    <use href="./icons/sprite-new.svg#linkedin"/>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <div class="footer__subscribe">
                 <h2 class="title__footer">Подпишитесь на рассылку</h2>
@@ -385,7 +403,7 @@
         <div class="modal container" id="call">
             <button data-modal-close type="button" class="modal__icon-btn">
                 <svg class="modal__closing-icon">
-                    <use href="./icons/modal.svg#X"></use>
+                    <use href="./icons/sprite-new.svg#close-btn"></use>
                 </svg>
             </button>
             <h3 class="title__modal">Оставьте свои данные, мы вам перезвоним</h3>
@@ -394,21 +412,21 @@
                     <div class="modal__wrapper">
                         <input class="modal__input" type="text" id="email">
                         <svg class="modal__icon">
-                            <use href="./icons/modal.svg#email"></use>
+                            <use href="./icons/sprite-new.svg#email"></use>
                         </svg>
                     </div>
                     <label class="modal__label" for="person">Телефон</label>
                     <div class="modal__wrapper">
                         <input class="modal__input" type="text" id="person">
                         <svg class="modal__icon">
-                            <use href="./icons/modal.svg#person"></use>
+                            <use href="./icons/sprite-new.svg#person"></use>
                         </svg>
                     </div>
                     <label class="modal__label" for="phone">Почта</label>
                     <div class="modal__wrapper">
                         <input class="modal__input" type="text" id="phone">
                         <svg class="modal__icon">
-                            <use href="./icons/modal.svg#phone"></use>
+                            <use href="./icons/sprite-new.svg#phone"></use>
                         </svg>
                     </div>
                 <label for="comments" class="modal__comments"> Комментарий</label>
@@ -421,6 +439,8 @@
             </form>
         </div>
     </div>
-    <script src="js/script.js"></script>
+    
+    <script src="./js/script.js"></script>
+    <script src="./js/menu.js"></script>
 </body>
 </html>
